@@ -1,0 +1,52 @@
+.main {
+   &::before {
+      content: "";
+      position: absolute;
+      background-image: url("/images/illustration-box-desktop.svg");
+      background-size: 200px 193px;
+      background-repeat: no-repeat;
+      background-position: left center;
+      width: 100%;
+      height: 100%;
+      top: 50px;
+      left: -138px;
+
+      @include point-down(medium) {
+         display: none;
+      }
+   }
+
+   &__hero_desktop {
+      //    position: relative;
+      background-size: 482px 369px;
+      background-repeat: no-repeat;
+      background-position: -90px center;
+      width: 100%;
+
+      @include point-down(medium) {
+         display: none;
+         background-image: url("/images/illustration-woman-online-mobile.svg");
+      }
+   }
+
+   &__hero_mobile {
+      @include point-down(medium) {
+          position: relative;
+         // width: 100%;
+         // height: 150px;
+         // background-repeat: no-repeat;
+         // background-position: center;
+
+         &::before{
+             content: '';
+             position: absolute;
+             background-image: url('/images/illustration-woman-online-mobile.svg');
+             background-repeat: no-repeat;
+             background-position: center;
+             width: 100%;
+             height: 180px;
+             top: -110px;
+         }
+      }
+   }
+}

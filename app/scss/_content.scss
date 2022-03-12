@@ -1,0 +1,107 @@
+// .section {
+// }
+
+.main {
+   position: relative;
+   width: 920px;
+   //    height: 510px;
+   display: flex;
+   background-color: #fff;
+   border-radius: 20px;
+   margin: 0 auto;
+   box-shadow: 0 15px 30px $veryDarkGrayishBlue;
+   // z-index: 2;
+   background-image: url("/images/bg-pattern-desktop.svg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: -525px -260px;
+
+   @include point-down(medium){
+      flex-direction: column;
+      width: 700px;
+      background-image: url('/images/bg-pattern-mobile.svg');
+      background-size: auto;
+      background-position: top center;
+      background-repeat: no-repeat;
+      border-radius: 30px;
+  }
+
+   @include point-down(small){
+      width: 330px;
+  }
+
+   &__content {
+      width: 100%;
+      padding: 70px 90px 80px 60px;
+
+      @include point-down(medium){
+         // padding-top: 0;
+      }
+
+      @include point-down(small){
+         padding: 127px 20px 50px 20px;
+      }
+
+      h1 {
+         padding-bottom: 30px;
+         font-size: 30px;
+         font-weight: 700;
+
+         @include point-down(medium){
+            text-align: center;
+            margin: 0;
+         }
+      }
+
+      .accord {
+         position: relative;
+         padding: 20px 0;
+         border-bottom: 1px solid $lightGrayishBlue;
+         font-size: 1rem;
+         font-weight: 400;
+         
+         @include point-down(medium){
+            font-size: 13px;
+         }
+
+         &_flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+               float: right;
+               transform: rotate(0deg);
+               transition: 0.3s transform ease-in-out;
+            }
+
+            a {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               transition: color 200ms ease-in-out;
+               width: 100%;
+
+               &[aria-expanded="true"] {
+                  color: $veryDarkDesaturatedBlue;
+                  font-weight: 700;
+                  padding-bottom: 1em;
+
+                  img {
+                     transform: rotate(-180deg);
+                  }
+               }
+
+               &:hover {
+                  color: $softRed;
+               }
+            }
+         }
+
+         .collapse,
+         .collapsing {
+            color: $darkGrayishblue;
+         }
+      }
+   }
+}
