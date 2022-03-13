@@ -59,12 +59,12 @@ a:hover {
 .attribution {
   font-size: 11px;
   text-align: center;
-  color: red;
+  color: white;
   margin-top: 30px;
 }
 
 .attribution a {
-  color: red;
+  color: white;
 }
 
 .main::before {
