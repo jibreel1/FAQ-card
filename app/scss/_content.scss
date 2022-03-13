@@ -1,5 +1,8 @@
-// .section {
-// }
+.section {
+   @include point-down(medium){
+      margin: 170px 0 40px 0;
+   }
+}
 
 .main {
    position: relative;

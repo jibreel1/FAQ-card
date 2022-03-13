@@ -23,6 +23,11 @@ body {
    height: 100vh;
    margin: 0;
    padding: 0;
+
+   @include point-down(medium) {
+      height: auto;
+   }
+
 }
 
 //Texts
@@ -37,4 +42,15 @@ a:visited,
 a:hover {
    text-decoration: none;
    color: $veryDarkGrayishBlue;
+}
+
+.attribution {
+   font-size: 11px;
+   text-align: center;
+   color: red;
+   margin-top: 30px;
+
+   a {
+      color: red;
+   }
 }
