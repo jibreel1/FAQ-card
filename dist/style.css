@@ -37,7 +37,7 @@ body {
   padding: 0;
 }
 
-@media (max-width: 63.9375em) {
+@media (max-width: 39.9375em) {
   body {
     height: auto;
   }

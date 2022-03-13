@@ -24,7 +24,7 @@ body {
    margin: 0;
    padding: 0;
 
-   @include point-down(medium) {
+   @include point-down(small) {
       height: auto;
    }
 
